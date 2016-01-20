@@ -1,0 +1,9 @@
+<div class="grid portfolio">
+  {% for project in site.projects %}
+  <a class="project-link" href="{{ project.url | prepend: site.baseurl }}">
+    <div class="grid-item grid-item--width{{ project.blocksize }}">
+      <img src="{{ project.coverimage }}" alt="">
+    </div>
+  </a>
+  {% endfor %}
+</div>

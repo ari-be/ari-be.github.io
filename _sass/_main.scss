@@ -1,0 +1,137 @@
+$main-color: #222;
+$grey-text: #222;
+$bg-color: #DFDFDF;
+$secondary-color: #222;
+$canvas-color: #fff;
+$canvas-width: 2rem;
+$canvas-banner-height: 8rem;
+
+$paragraph-font: 'Lato', Helvetica, sans-serif;
+
+html {
+  font-size: 100%;
+
+  &, body {
+    background-color: $bg-color;
+  }
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  font-family: $paragraph-font;
+  color: $grey-text;
+}
+
+p {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+.canvas {
+  .top, .bottom, .left, .right {
+    z-index: 1000;
+    position: fixed;
+    display: block;
+    background-color: $canvas-color;
+  }
+
+  .top {
+    top: 0;
+    width: 100%;
+    height: $canvas-banner-height;
+  }
+
+  .bottom {
+    bottom: 0;
+    width: 100%;
+    height: $canvas-width;
+  }
+
+  .right {
+    right: 0;
+    height: 100%;
+    width: $canvas-width;
+  }
+
+  .left {
+    left: 0;
+    height: 100%;
+    width: $canvas-width;
+  }
+
+}
+
+.container {
+  padding: $canvas-banner-height ($canvas-width*2) ($canvas-width*2) !important;
+}
+
+nav.container {
+  padding: 0px !important;
+
+  .menu {
+    float: right;
+
+    ul, li {
+      list-style: none;
+      padding: 0px;
+    }
+
+    li {
+      float:left;
+      margin-left: 4rem;
+    }
+
+    li a {
+      font-size: 2rem;
+      line-height: ($canvas-banner-height - 0.3rem);
+    }
+  }
+
+  .nav-left {
+    float: left;
+    width: 200px;
+
+    p {
+      line-height: ($canvas-banner-height - 0.3rem);
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.logo-image {
+  width: ($canvas-banner-height - 2rem);
+  height: ($canvas-banner-height - 2rem);
+  margin: 1rem 0;
+  border-radius: 50%;
+  overflow: hidden;
+  float: left;
+  margin-right: 1.5rem;
+}
+
+.greetings {
+  padding: 5rem;
+}
+
+// gallery portfolio
+.grid-item { width: 25%; }
+.grid-item--width2 { width: 50%; }
+
+@media screen and (max-width: 767px) {
+  .grid-item { width: 50%; }
+  .grid-item--width2 { width: 100%; }
+}

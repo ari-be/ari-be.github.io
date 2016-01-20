@@ -1,0 +1,12 @@
+---
+layout: base
+---
+
+{{content}}
+
+{% for image in page.gallery %}
+   <img src="{{ image.url }}" alt="">
+{% endfor %}
+
+<h5>Other projects</h5>
+{% include bottom-gallery.html %}
